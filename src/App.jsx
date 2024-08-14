@@ -1,6 +1,6 @@
 
 import './App.css'
-import ProfileCard from './components/profileCard'
+import RandomUserPage from './page/RandomUser'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <div className='flex items-center bg-slate-500 justify-center h-screen'>
       
-        <ProfileCard />
+        <RandomUserPage />
       </div>
     </>
   )
