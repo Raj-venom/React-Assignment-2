@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 
-function JokeCard() {
+function JokeCard({ joke, time, views, likes, comments, bookmark, retweets }) {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif" }} className='w-[524px] h-[273px] bg-[#000000] rounded-[12px] '>
       <div className='flex gap-5 items-center px-6 py-4'>
@@ -36,14 +36,13 @@ function JokeCard() {
 
       <div className='w-[550px] h-[43px] px-6 mt-3' >
         <h2 className='text-[14px] font-[400] leading-[17px] tracking-[-0.02em] text-white'>
-          Even some of the best AI software engineers in the world don’t realize how advanced Tesla AI has become
+          {joke}
         </h2>
       </div>
-
       <div className=' px-6 mt-3'>
         <h2 className='text-[#A0A0A0] font-[400] leading-[12px] tracking-[-0.02em] text-[10px]'>
-          11:18 PM · Jul 30, 2024 ·
-          <span className='text-white font-[600] leading-[12px] tracking-[-0.02em] text-[10px] '>20.5M </span>
+          {time} ·
+          <span className='text-white font-[600] leading-[12px] tracking-[-0.02em] text-[10px] '>  {views}M </span>
           Views
         </h2>
       </div>
@@ -53,22 +52,21 @@ function JokeCard() {
 
         <div className='mx-3 items-center flex gap-1'>
           <FaRegComment color='#71767B' className='w-[9px] h-[9px]' />
-          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>4.9K</p>
+          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>{comments}</p>
         </div>
         <div className='mx-3 items-center flex gap-1'>
-          {/* <FaRegComment color='#71767B' className='w-[9px] h-[9px]' /> */}
           <img src="share.png" alt="" />
-          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>5.3K</p>
+          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>{retweets}</p>
         </div>
 
         <div className='mx-3 items-center flex gap-1'>
           <FaRegHeart color='#71767B' className='w-[9px] h-[9px]' />
-          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>53K</p>
+          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>{likes}</p>
         </div>
 
         <div className='mx-3 items-center flex gap-1'>
           <FaRegBookmark color='#71767B' className='w-[9px] h-[9px]' />
-          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>1.1K</p>
+          <p className='text-[8px] font-[400] tracking-[-0.02em] leading-[9.68px] text-[#71767B] '>{bookmark}</p>
         </div>
 
         <div className='mx-3 items-center flex gap-1'>
